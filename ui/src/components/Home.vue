@@ -3,23 +3,14 @@
     <b-container>
       <b-col>
         <b-row>
-          <b-col>
-            <img alt="Profile Picture" src="../assets/profile.jpg">
+          <b-col align="end">
+            <img alt="Profile Picture" src="../assets/smallface.jpg">
           </b-col>
-        </b-row>
-        <b-row>
-          <b-col>
-            {{content.bio.name}}
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col>
-            {{content.bio.title}}
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col>
-            {{content.bio.bioText}}
+          <b-col align="start">
+            <b-row>{{content.home.name}}</b-row>
+            <b-row>{{content.home.description}}</b-row>
+            <b-row>{{content.home.phone}}</b-row>
+            <b-row>{{content.home.email}}</b-row>
           </b-col>
         </b-row>
       </b-col>
@@ -32,7 +23,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import Content from "@/assets/Content";
 
 @Component
-export default class Bio extends Vue {
+export default class Home extends Vue {
   content = Content;
 }
 </script>

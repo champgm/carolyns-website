@@ -1,5 +1,17 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Bio/>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import Bio from "@/components/Bio.vue"; // @ is an alias to /src
+
+@Component({
+  components: {
+    Bio
+  }
+})
+export default class BioView extends Vue {}
+</script>

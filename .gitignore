@@ -6,3 +6,4 @@ inspect.json
 stats.json
 *.zip
 tsc-out
+.DS_Store

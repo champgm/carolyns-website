@@ -1,0 +1,22 @@
+{
+  "name": "carolyns-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-ui": "npm --prefix ui install",
+    "upload-ui": "aws s3 cp ui/dist s3://carolyns-website/ --recursive --profile personal",
+    "build": "npm --prefix ui run build",
+    "package-cloudformation": "aws cloudformation package --template ./deployment.yml --s3-bucket carolyns-website-deployments --output-template packaged-sam.yml --profile personal",
+    "deploy-cloudformation": "aws cloudformation deploy --template-file packaged-sam.yml --stack-name carolyns-website --capabilities CAPABILITY_IAM --profile personal",
+    "package": "npm run package-cloudformation",
+    "deploy": "npm run deploy-cloudformation && npm run upload-ui",
+    "what": "ever"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@personalgithub:champgm/carolyns-website.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN readme.md"
+}
