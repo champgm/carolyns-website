@@ -1,19 +1,30 @@
 <template>
   <div>
     <b-container>
-      <b-col>
-        <b-row>
-          <b-col align="end">
-            <img alt="Profile Picture" src="../assets/smallface.jpg">
+      <b-row>
+      <b-col></b-col>
+      <b-col cols="7">
+        <b-jumbotron class="jumbo">
+          <b-col>
+            <b-row align-h="center">
+              <b-col cols="2" >
+                <b-row align-h="end">
+                  <img alt="Profile Picture" src="../assets/smallface.jpg">
+                </b-row>
+              </b-col>
+              <b-col cols="1"></b-col>
+              <b-col cols="4" class="centerText">
+                <b-row>{{content.home.name}}</b-row>
+                <b-row>{{content.home.description}}</b-row>
+                <b-row>{{content.home.phone}}</b-row>
+                <b-row>{{content.home.email}}</b-row>
+              </b-col>
+            </b-row>
           </b-col>
-          <b-col align="start">
-            <b-row>{{content.home.name}}</b-row>
-            <b-row>{{content.home.description}}</b-row>
-            <b-row>{{content.home.phone}}</b-row>
-            <b-row>{{content.home.email}}</b-row>
-          </b-col>
-        </b-row>
+        </b-jumbotron>
       </b-col>
+      <b-col></b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -30,6 +41,12 @@ export default class Home extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.centerText{
+  text-align: start;
+}
+.jumbo{
+  padding: 1rem;
+}
 h3 {
   margin: 40px 0 0;
 }
