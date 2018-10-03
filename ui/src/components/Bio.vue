@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-container>
+      <b-jumbotron>
       <b-col>
         <b-row>
           <b-col>
@@ -23,6 +24,7 @@
           </b-col>
         </b-row>
       </b-col>
+      </b-jumbotron>
     </b-container>
   </div>
 </template>
